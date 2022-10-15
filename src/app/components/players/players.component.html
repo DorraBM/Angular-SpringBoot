@@ -1,0 +1,15 @@
+<app-banner [title]="text"></app-banner>
+
+
+
+  <div class="row">
+         <div class="col-lg-12 " *ngFor="let l of players">
+           <app-player [playerInput]="l"></app-player>
+        </div>
+        <button><a routerLink="add_player" class="nav-link">Add Player</a></button>
+ </div>
+      
+    
+
+
+  

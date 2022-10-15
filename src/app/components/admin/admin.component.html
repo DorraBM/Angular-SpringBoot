@@ -1,0 +1,94 @@
+<div class="hero overlay" style="background-image: url('assets/images/bg_3.jpg');">
+    <div class="container">
+      <div class="row align-items-center">
+        <div class="col-lg-9 mx-auto text-center">
+          <h1 class="text-white">Admin</h1>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ul class="nav nav-tabs" id="myTab" role="tablist">
+    <li class="nav-item" role="presentation">
+      <button class="nav-link active" id="home-tab" data-bs-toggle="tab" data-bs-target="#home-tab-pane" type="button" role="tab" aria-controls="home-tab-pane" aria-selected="true">Maches</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="profile-tab" data-bs-toggle="tab" data-bs-target="#profile-tab-pane" type="button" role="tab" aria-controls="profile-tab-pane" aria-selected="false">Players</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="contact-tab" data-bs-toggle="tab" data-bs-target="#contact-tab-pane" type="button" role="tab" aria-controls="contact-tab-pane" aria-selected="false">Contact</button>
+    </li>
+    <li class="nav-item" role="presentation">
+      <button class="nav-link" id="disabled-tab" data-bs-toggle="tab" data-bs-target="#disabled-tab-pane" type="button" role="tab" aria-controls="disabled-tab-pane" aria-selected="false" disabled>Disabled</button>
+    </li>
+  </ul>
+  <div class="tab-content" id="myTabContent">
+    <div class="tab-pane fade show active" id="home-tab-pane" role="tabpanel" aria-labelledby="home-tab" tabindex="0">
+        <table class="table">
+            <thead>
+              <tr>
+                
+                <th scope="col">teamOne</th>
+                <th scope="col">teamTwo</th>
+                <th scope="col">scoreOne</th>
+                <th scope="col">scoreTwo</th>
+                <th scope="col">Action</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr *ngFor="let m of matches">
+                
+                <td>{{m.teamOne}}</td>
+                <td>{{m.teamTwo}}</td>
+                <td>{{m.scoreOne}}</td>
+                <td>{{m.scoreTwo}}</td>
+                <td>
+                    <button class="btn btn-danger" type="button" (click)="deleteMatch(m.id)">delete</button>
+                </td>
+              </tr>
+              
+            </tbody>
+          </table>
+
+
+
+      
+  
+       
+      </div>
+
+
+  
+
+
+
+
+    <div class="tab-pane fade" id="profile-tab-pane" role="tabpanel" aria-labelledby="profile-tab" tabindex="0">
+      <table class="table">
+        <thead>
+          <tr>
+            <th scope="col">ID</th>
+            <th scope="col">Name Player</th>
+            <th scope="col">Forward number</th>
+            <th scope="col">Action</th>
+          
+          </tr>
+        </thead>
+        <tbody>
+          <tr *ngFor="let m of players">
+            <th scope="row">{{m.id}}</th>
+            <td>{{m.name}}</td>
+            <td>{{m.forward}}</td>
+           
+            <td>
+                <button class="btn btn-danger" type="button" (click)="deletePlayer(m.id)">delete</button>
+            </td>
+          </tr>
+          
+        </tbody>
+      </table>
+
+    
+    </div>
+    <div class="tab-pane fade" id="contact-tab-pane" role="tabpanel" aria-labelledby="contact-tab" tabindex="0">Contact</div>
+    <div class="tab-pane fade" id="disabled-tab-pane" role="tabpanel" aria-labelledby="disabled-tab" tabindex="0">...</div>
+  </div>

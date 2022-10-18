@@ -1,0 +1,18 @@
+{
+  "matches": [
+    {
+      "teamOne": "est",
+      "teamTwo": "ca",
+      "scoreOne": "5",
+      "scoreTwo": "2",
+      "id": 1
+    }
+  ],
+  "players": [
+    {
+      "id": 1,
+      "name": "Ronaldo",
+      "forward": 10
+    }
+  ]
+}

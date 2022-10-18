@@ -26,7 +26,7 @@
         <table class="table">
             <thead>
               <tr>
-                
+                <th scope="col">#</th>
                 <th scope="col">teamOne</th>
                 <th scope="col">teamTwo</th>
                 <th scope="col">scoreOne</th>
@@ -36,13 +36,14 @@
             </thead>
             <tbody>
               <tr *ngFor="let m of matches">
-                
+                <td>{{m.id}}</td>
                 <td>{{m.teamOne}}</td>
                 <td>{{m.teamTwo}}</td>
                 <td>{{m.scoreOne}}</td>
                 <td>{{m.scoreTwo}}</td>
                 <td>
                     <button class="btn btn-danger" type="button" (click)="deleteMatch(m.id)">delete</button>
+                    <button class="btn btn-info" type="button" (click)="navigate(m.id)" >Edit</button>
                 </td>
               </tr>
               

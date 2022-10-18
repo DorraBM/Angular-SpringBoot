@@ -1,9 +1,9 @@
 .win{
-    color: green;
+    font-size: 32px;
 }
 .lose{
-    color:red;
+    font-size: 18px;
 }
 .draw{
-    color: yellow;
+    font-size: 22px;
 }

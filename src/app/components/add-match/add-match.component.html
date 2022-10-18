@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-9 mx-auto text-center">
-          <h1 class="text-white">ADD MATCHES</h1>
+          <h1 class="text-white">{{title}} MATCHES</h1>
         </div>
       </div>
     </div>
@@ -11,7 +11,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <form #addmatchForm (ngSubmit)="submit()">
+          <form #addmatchForm (ngSubmit)="addEditMatch()">
             <div class="form-group">
               <input type="text" class="form-control" [(ngModel)]="match.teamOne" name="a" placeholder="teameOne">
               
@@ -29,7 +29,8 @@
             
             
             <div class="form-group">
-              <input type="submit"  class="btn btn-primary py-3 px-5" value="Sign Up">
+             
+              <button class="btn btn-primary py-3 px-5">{{title}} Match</button>
             </div>
           </form>  
         </div>

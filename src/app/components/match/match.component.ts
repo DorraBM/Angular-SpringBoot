@@ -10,6 +10,8 @@ export class MatchComponent implements OnInit {
  @Output() newMatches=new EventEmitter<any>()
  txt1:string
  txt2:string
+
+
   constructor() { }
 
   ngOnInit(): void {
@@ -46,5 +48,6 @@ export class MatchComponent implements OnInit {
     else
     return ["yellow","egale"]
   }
+
 
 }

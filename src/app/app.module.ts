@@ -18,7 +18,7 @@ import { PlayersComponent } from './components/players/players.component';
 import { BannerComponent } from './components/banner/banner.component';
 import { MatchComponent } from './components/match/match.component';
 import { PlayerComponent } from './components/player/player.component';
-
+import {HttpClient, HttpClientModule } from '@angular/common/http';
 @NgModule({
   declarations: [
     AppComponent,
@@ -42,7 +42,8 @@ import { PlayerComponent } from './components/player/player.component';
     BrowserModule,
     AppRoutingModule,
     ReactiveFormsModule,
-    FormsModule
+    FormsModule,
+    HttpClientModule
     
   ],
   providers: [],

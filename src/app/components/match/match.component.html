@@ -3,11 +3,13 @@
     <div class="team-1 w-50">
       <div class="team-details w-100 text-center">
         <img src="assets/images/logo_1.png" alt="Image" class="img-fluid">
-        <h3  [ngClass]="{ win:compare(matchInput.scoreOne,matchInput.scoreTwo)[0]=='green',
+        <h3  [ngClass]="
+        { win:compare(matchInput.scoreOne,matchInput.scoreTwo)[0]=='green',
         lose:compare(matchInput.scoreOne,matchInput.scoreTwo)[0]=='red',
         draw:compare(matchInput.scoreOne,matchInput.scoreTwo)[0]=='yellow'
-     } " >{{matchInput.teamOne}} ({{compare(matchInput.scoreOne,matchInput.scoreTwo)[1]}})</h3>
-        <ul class="list-unstyled">
+        }">
+     {{matchInput.teamOne}} ({{compare(matchInput.scoreOne,matchInput.scoreTwo)[1]}})</h3>
+        <ul class="list-unstyled" [ngStyle]="{color:compare(matchInput.scoreOne,matchInput.scoreTwo)[0]}">
           <li>Anja Landry (7)</li>
           <li>Eadie Salinas (12)</li>
           <li>Ashton Allen (10)</li>

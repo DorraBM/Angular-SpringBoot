@@ -6,7 +6,7 @@ import { Component, Input, OnInit } from '@angular/core';
   styleUrls: ['./maches.component.css']
 })
 export class MachesComponent implements OnInit {
-  text="matches"
+  text="Matches"
   matches:any
   constructor() { }
 

@@ -2,7 +2,7 @@
     <div class="container">
       <div class="row align-items-center">
         <div class="col-lg-9 mx-auto text-center">
-          <h1 class="text-white">ADD PLAYERS</h1>
+          <h1 class="text-white">{{title}} PLAYERS</h1>
         </div>
       </div>
     </div>
@@ -12,7 +12,7 @@
     <div class="container">
       <div class="row">
         <div class="col-lg-12">
-          <form #addPlayerForm (ngSubmit)="submit()">
+          <form #addPlayerForm (ngSubmit)="addEditPlayer()">
             <div class="form-group">
               <input type="text" class="form-control" [(ngModel)]="player.name" name="a" placeholder="player name">
               

@@ -1,4 +1,4 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input, OnInit, Output, EventEmitter } from '@angular/core';
 
 @Component({
   selector: 'app-player',
@@ -7,6 +7,7 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class PlayerComponent implements OnInit {
   @Input() playerInput:any
+  @Output() newPlayers=new EventEmitter<any>()
   constructor() { }
 
   ngOnInit(): void {

@@ -19,23 +19,23 @@ export class MatchComponent implements OnInit {
 
   }
 
-  delete(id:any)
-  { let matches=JSON.parse(localStorage.getItem("matches")|| '[]')
-     let pos 
-     for (let i=0; i<matches.length;i++)
-     {
-      if(matches[i].id==id)
-      pos=i
-     }
+  // delete(id:any)
+  // { let matches=JSON.parse(localStorage.getItem("matches")|| '[]')
+  //    let pos 
+  //    for (let i=0; i<matches.length;i++)
+  //    {
+  //     if(matches[i].id==id)
+  //     pos=i
+  //    }
      
 
     
-     matches.splice(pos,1)
-     localStorage.setItem("matches",JSON.stringify(matches))
-     this.newMatches.emit(matches)
+  //    matches.splice(pos,1)
+  //    localStorage.setItem("matches",JSON.stringify(matches))
+  //    this.newMatches.emit(matches)
      
 
-  }
+  // }
   
 
 

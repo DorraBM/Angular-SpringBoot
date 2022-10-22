@@ -19,6 +19,8 @@ import { BannerComponent } from './components/banner/banner.component';
 import { MatchComponent } from './components/match/match.component';
 import { PlayerComponent } from './components/player/player.component';
 import {HttpClient, HttpClientModule } from '@angular/common/http';
+import { MyFilterPipe } from './pipes/my-filter.pipe';
+import { MyDirectiveDirective } from './pipes/my-directive.directive';
 @NgModule({
   declarations: [
     AppComponent,
@@ -36,6 +38,8 @@ import {HttpClient, HttpClientModule } from '@angular/common/http';
     BannerComponent,
     MatchComponent,
     PlayerComponent,
+    MyFilterPipe,
+    MyDirectiveDirective,
     
   ],
   imports: [

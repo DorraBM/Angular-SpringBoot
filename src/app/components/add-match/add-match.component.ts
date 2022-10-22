@@ -30,10 +30,10 @@ id:any;
       
 
     this.addMatchForm=this.formBuilder.group({
-      teamOne:[''],
-      teamTwo:[''],
-      scoreOne:[''],
-      scoreTwo:['']
+      teamOne:[""],
+      teamTwo:[""],
+      scoreOne:[""],
+      scoreTwo:[""]
 
     })
 
@@ -60,7 +60,7 @@ id:any;
 
 if(this.id)
 {
-  console.log("heree",this.match)
+  console.log("heree matchhhh",this.match)
   this.matchService.updateMatch(this.match).subscribe(()=>{
     this.router.navigate(['/admin']);
   })
@@ -68,7 +68,7 @@ if(this.id)
 }
 else
 {
-  console.log("heree",this.match) 
+  console.log("heree match ",this.match) 
   let matchId=JSON.parse(localStorage.getItem("matchId"|| '15'))
  this.match.id=matchId
  this.matchService.addMatch(this.match).subscribe((res)=>{
@@ -84,7 +84,7 @@ else
   {
     this.matchService.getMatchById(this.id).subscribe((res)=>{
       console.log("match by id",res);
-      this.match=res[0]
+      this.match=res
   })
 }
 

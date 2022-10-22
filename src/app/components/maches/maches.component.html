@@ -1,7 +1,16 @@
 <app-banner [title]="text"></app-banner>
+<div>
+  <form>
+    <div class="text-ceter">
+        <label for="" style="padding: 20px;">Filter B</label>
+        <input type="text" [(ngModel)]='term' name="a">
+    </div>
+  </form>
+</div>
+<br><br><br>
 <div class="container">
   <div class="row">
-      <div class="col-lg-12" style="margin-bottom: 15%;" *ngFor="let l of matches">
+      <div class="col-lg-12" style="margin-bottom: 15%;" *ngFor="let l of matches | myFilter:term">
         
         <app-match [matchInput]="l" (newMatches)="updateMatches($event)"></app-match>
        

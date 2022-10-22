@@ -20,7 +20,8 @@ const routes: Routes = [
   {path:'admin',component:AdminComponent},
   {path:'matches',component:MachesComponent},
   {path:'players',component:PlayersComponent},
-  {path:'add_player',component:AddPlayerComponent}
+  {path:'add_player',component:AddPlayerComponent},
+  {path:'add_player/:playerId',component:AddPlayerComponent}
   
   
 ];

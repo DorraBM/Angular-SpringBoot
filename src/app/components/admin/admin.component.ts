@@ -44,15 +44,11 @@ export class AdminComponent implements OnInit {
 
   deletePlayer(id:any)
   {
-     let pos 
-     for (let i=0; i<this.players.length;i++)
-     {
-      if(this.players[i].id==id)
-      pos=i
-     }
-
-     this.players.splice(pos,1)
-     localStorage.setItem("players",JSON.stringify(this.players))
+    this.playerService.deletePlayer(id).subscribe(()=>{
+      console.log("success delete!")
+     
+      this.getAllPlayers()
+    })
   }
 
   getAllMatches() { 
@@ -71,9 +67,14 @@ export class AdminComponent implements OnInit {
   })
 }
 
-navigate(id:any)
+navigateMatch(id:any)
 {
-  this.router.navigate([`add-match/${id}`]);
+  console.log("navigate match",id);
+  this.router.navigate(['/add_match',id]);
+}
+navigatePlayer(id:any)
+{
+  this.router.navigate(['/add_player',id]);
 }
 
 }

@@ -30,6 +30,6 @@ export class ServiceMatchesService {
 
   updateMatch(form:any)
   {
-    return this.http.post(this.matchURL+"/"+form.id, form);
+    return this.http.put(this.matchURL+"/"+form.id, form);
   }
 }

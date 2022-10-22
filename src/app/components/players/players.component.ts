@@ -8,6 +8,7 @@ import { Component, OnInit } from '@angular/core';
 export class PlayersComponent implements OnInit {
   players:any
   text="players"
+  
   constructor() { }
 
   ngOnInit(): void {
@@ -16,18 +17,13 @@ export class PlayersComponent implements OnInit {
     
   }
 
-  delete(id:any)
+  updatePlayers(x:any)
   {
-     let pos 
-     for (let i=0; i<this.players.length;i++)
-     {
-      if(this.players[i].id==id)
-      pos=i
-     }
-
-     this.players.splice(pos,1)
-     localStorage.setItem("players",JSON.stringify(this.players))
+    this.players=x
   }
+  
+
+
 
 
 }
